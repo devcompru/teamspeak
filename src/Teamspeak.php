@@ -10,14 +10,24 @@ use TeamSpeak3_Node_Server;
 
 class Teamspeak
 {
-    private  $_server;
+
+    private static ?TeamSpeak3_Node_Server $_server;
 
     public function __construct($config)
     {
-        $this->_server = Connect::connect($config);
+        static::$_server = Connect::connect($config);
     }
 
 
+    public function getServer(): TeamSpeak3_Node_Server
+    {
+        return static::$_server;
+    }
+    public function setGfxBanner(string $url):void
+    {
+        static::$_server->virtualserver_hostbanner_gfx_url = $url;
+
+    }
 
 
 
