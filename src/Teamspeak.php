@@ -12,13 +12,13 @@ class Teamspeak
 {
     private  $_server;
 
-    public function __construct($url, $login, $password, $port)
+    public function __construct($config)
     {
-        $this->_server = Connect::connect($url, $login, $password, $port);
+        $this->_server = Connect::connect($config);
     }
 
 
-    
+
 
 
 }

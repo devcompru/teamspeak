@@ -13,8 +13,13 @@ class Connect
 
     }
 
-    public static function connect($url, $login, $password, $port)
+    public static function connect($config)
     {
+        $url = $config['url'];
+        $login = $config['login'];
+        $password = $config['password'];
+        $port= $config['port'];
+
         if(is_null(static::$_connection))
         {
             static::$_connection ??= TeamSpeak3::factory($url);
