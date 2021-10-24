@@ -1,0 +1,25 @@
+{
+  "name": "devcompru/teamspeak",
+  "description": "Basic Teamspeak3",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Dmitriy Evseev",
+      "email": "dev@devcomp.ru"
+    }
+  ],
+  "require": {
+    "php": "8.*",
+    "planetteamspeak/ts3-php-framework": ">=1.1.34"
+  },
+  "require-dev": {
+
+  },
+  "autoload": {
+    "psr-4": {
+      "Devcompru\\Teamspeak\\": "src"
+
+    }
+  }
+}
